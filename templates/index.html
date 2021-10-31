@@ -1,0 +1,65 @@
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+  rel="stylesheet"
+/>
+
+<style>
+  * {
+    background: #303841;
+    display: border-box;
+    margin: 0;
+    padding: 0;
+    color: #eeeeee;
+  }
+
+  .info-box {
+    display: flex;
+    justify-content: center;
+    margin: 5;
+    padding: 5;
+  }
+
+  .info-box.container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-box.container.orders {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .info-box.container.orders.order {
+    display: flex
+  }
+
+  h1 {
+    color: darkorange;
+    font-size: 40pt;
+  }
+
+  p {
+    font-size: 24pt;
+  }
+</style>
+<meta http-equiv="refresh" content="5" />
+<div class="info-box">
+  <div class="container">
+    <h1>{{message}}</h1>
+    <p>Total Orders: {{count}}</p>
+    <div class="orders">
+      {% for order in orders %}
+      <div class="order"></div>
+        order: {{ order.size }} {{order.drink }} {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      console.log("document is ready");
+    });
+  </script>
+</div>

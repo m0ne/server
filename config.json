@@ -1,0 +1,5 @@
+{
+  "deployed_at": "local",
+  "sendgrid_key": "",
+  "mongo_db_connection_string": ""
+}
